@@ -1,11 +1,11 @@
 Veewee::Session.declare({
   :cpu_count => '1',
-  :memory_size=> '2048',
+  :memory_size=> '512',
   :disk_size => '10140',
   :disk_format => 'VDI',
   :hostiocache => 'off',
   :os_type_id => 'Ubuntu_64',
-  :iso_file => "ubuntu-12.04.1-server-amd64.iso",
+  :iso_file => "ubuntu-12.10-server-amd64.iso",
   :iso_src => "http://releases.ubuntu.com/12.10/ubuntu-12.10-server-amd64.iso",
   :iso_md5 => '4bd3270bde86d7e4e017e3847a4af485',
   :iso_download_timeout => "1000",
