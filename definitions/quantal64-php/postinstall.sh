@@ -12,6 +12,7 @@ sed 's@us.archive.ubuntu.com@be.archive.ubuntu.com@' -i /etc/apt/sources.list
 apt-get -y update
 yes | apt-get -y install python-software-properties
 echo 'deb http://repo.percona.com/apt precise main' > /etc/apt/sources.list.d/percona.list
+apt-get -y update
 yes | apt-get -y -o 'DPkg::Options::=--force-confold' dist-upgrade
 apt-get -y install linux-headers-$(uname -r) build-essential
 apt-get -y install zlib1g-dev libssl-dev libreadline-gplv2-dev
