@@ -1,0 +1,8 @@
+vendor
+cached-copy
+.slow
+apachelogs/*
+*.log
+tmp/*
+data/releases
+app

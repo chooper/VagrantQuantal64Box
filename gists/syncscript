@@ -1,0 +1,9 @@
+USER=$1
+SERVER=$2
+PROJECT=$3
+
+chmod 750 /etc/sudoers && echo 'Defaults env_keep+=SSH_AUTH_SOCK' >> /etc/sudoers
+
+#echo "$(curl -fsSL https://gist.github.com/raw/700531/pg_hba.conf)" >> /usr/local/var/postgres/pg_hba.conf
+
+rsync -avh --compress -e "ssh -o 'StrictHostKeyChecking no' -p 9999" --exclude-from="/tmp/rsyncexclude" --exclude="data/$PROJECT" $USER@$SERVER:/home/projects/$PROJECT/* /home/projects/$PROJECT/"
